@@ -4,10 +4,8 @@
 1. `npm run test` - removes the `tests/reports` directory and runs all specs headlessly
 1. `npm run serve-report` - merges and creates an HTML report of the previous run (from `reports/` dir)
    * Final report is located in `tests/reports/ready/report.html`
-   * Failed tests will have screenshots attached like so
-     <img src="docs/failedReporter.png" alt="drawing" width="200"/>
-
-
+   * Failed tests will have screenshots attached like so  
+     <img src="docs/failedReporter.png" alt="./docs/failedReporter.png" width="500"/>
 1. `npm run cypress:cli` - opens cypress graphical user interface
 ### Comments on defects / complaints
 1. When opening the page, for a brief moment `No products found` can be seen. It would be better to implement some loading indicator
