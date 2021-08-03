@@ -1,0 +1,11 @@
+<div class="product-container" (click)="handleClick()">
+    <div class="product-image-container">
+        <img class="product-image" [src]="product.imageUrl" alt="">
+    </div>
+
+    <div class="title">{{product.name}}</div>
+    <div class="secondary-text m-b-16">By {{product.brand}} {{product.model}}</div>
+    <div class="title">From USD {{generateRandomNumber(5, 8)}}</div>
+    <div class="extra-text m-b-16">From USD {{generateRandomNumber(4, 6)}} with Printify Premium</div>
+    <div class="secondary-text">8 sizes • 23 colors • 8 print providers</div>
+</div>

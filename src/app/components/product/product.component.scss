@@ -1,0 +1,33 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+
+.product-container {
+    display: flex;
+}
+
+.product-image-container {
+    text-align: center;
+    margin-bottom: 16px;
+    margin-right: 24px;
+}
+
+.title {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.secondary-text {
+    color: #8e8e8e;
+}
+
+.extra-text {
+    color: green;
+}
+
+.m-b-16 {
+    margin-bottom: 16px;
+}

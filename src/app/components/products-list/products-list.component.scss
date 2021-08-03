@@ -1,0 +1,30 @@
+.list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 16px;
+    margin-right: -32px;
+}
+
+.list-item {
+    width: calc(33% - 16px);
+}
+
+@media only screen and (max-width: 768px) {
+    .list {
+        margin-right: -16px;
+    }
+    .list-item {
+        width: calc(50% - 16px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .list {
+        margin-right: 0px;
+    }
+    .list-item {
+        width: calc(100% - 16px);
+    }
+}

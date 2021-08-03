@@ -1,0 +1,19 @@
+.search {
+  display: flex;
+  border: 1px solid green;
+  padding: 10px;
+  max-width: 960px;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+.icon {
+  width: 20px;
+}
+
+.search-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+}
