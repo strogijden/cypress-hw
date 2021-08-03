@@ -6,7 +6,7 @@
 1. `npm run start` - launches the application at localhost:4200 (this is used as `baseURL` for tests)
 1. `npm run test` - removes the `tests/reports` directory and runs all specs headlessly
 1. `npm run serve-report` - merges and creates an HTML report of the previous run (from `reports/` dir)
-    * Final report is located in `tests/reports/ready/report.html`. [Sample](./docs/reportSample.html)
+    * Final report is located in `tests/reports/ready/report.html`. [Report example](./docs/reportSample.html) (open in Your browser of choice)
     * Failed tests will have screenshots attached like so  
       <img src="docs/failedReporter.png" alt="./docs/failedReporter.png" width="500"/>
     * To test the reporter with failed tests, feel free to modify any spec file to fail
