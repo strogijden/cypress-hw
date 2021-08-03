@@ -4,7 +4,10 @@
 
 1. `npm install` - installs necessary project dependencies
 1. `npm run start` - launches the application at localhost:4200 (this is used as `baseURL` for tests)
-1. `npm run test` - removes the `tests/reports` directory and runs all specs headlessly
+1. `npm run test` - runs a series of commands: 
+    1. Cleans up the `tests/reports` directory
+    1. Runs all specs headlessly
+    1. Generates an HTML report of the test run (see `npm run serve-report` below for more information)
 1. `npm run serve-report` - merges and creates an HTML report of the previous run (from `reports/` dir)
     * Final report is located in `tests/reports/ready/report.html`. [Report example](./docs/reportSample.html) (open in Your browser of choice)
     * Failed tests will have screenshots attached like so  
@@ -20,7 +23,8 @@
 1. Since the application is simple, I tried using the cypress suggested pattern of defining custom `cy` commands instead
    of defining page objects. Commands are located in [support/index.ts](./tests/support/index.ts)
 1. In addition to cypress.io I used following npm packages:
-    1. `mochawesome` test reporter for generating HTML reports
+    1. `npm-run-all` - multiplatform tool for chaining npm commands
+    1. `mochawesome` - test reporter for generating HTML reports
     1. `mocha` - necessary for mochawesome to work
     1. `mochawesome-merge` - necessary for merging mochawesome reports into one final report
     1. `rimraf` - package allows wiping directories independent of the platform it's used on
