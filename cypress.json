@@ -6,5 +6,13 @@
   "supportFile": "tests/support/index.ts",
   "baseUrl": "http://localhost:4200",
   "video": false,
-  "screenshotsFolder": "tests/screenshots"
+  "screenshotsFolder": "tests/reports/ready/assets",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "tests/reports/unmerged",
+    "overwrite": false,
+    "html": false,
+    "json": true,
+    "timestamp": "mmddyyyy_HHMMss"
+  }
 }

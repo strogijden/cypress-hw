@@ -1,6 +1,7 @@
 /* tslint:disable:no-namespace */
 
 import { noProductsFound } from './constants';
+import * as addContext from 'mochawesome/addContext';
 
 // load type definitions that come with Cypress module
 /// <reference types="cypress" />
@@ -70,4 +71,16 @@ Cypress.Commands.add('waitForProductsToBeLoaded', () => {
 
 Cypress.Commands.add('checkNoProductsFound', () => {
     cy.productListContainer().should('include.text', noProductsFound);
+});
+
+/**
+ * Custom event listeners
+ */
+Cypress.on('test:after:run', (test, runnable) => {
+    // If test fails, we inform mocha runner of the screenshots location and bind it to a test name within the report
+    if (test.state === 'failed') {
+        const screenshot = `assets/${Cypress.spec.name}/${runnable?.parent?.title} -- ${test.title} (failed).png`;
+        const mochaContext = { test } as Mocha.Context;
+        addContext(mochaContext, screenshot);
+    }
 });
