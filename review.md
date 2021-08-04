@@ -25,3 +25,16 @@ The reporter you added looks great - good job 👍
 
 ![mochaawesome-reporter.png](./docs/mochaawesome-reporter.png)
 
+
+**Fuzzy search**
+
+Good point 🦅. I didn't consider this functionality. Indeed, it could improve the actual search.
+
+> Fuzzy search would be better ...
+
+**Data issues**
+
+⚠️ when you click on listing 3, it will return data for listing 1. We added it as "easter-egg" for the candidates as attentiveness exercise.
+Probably you noticed it, but it was expected it would be documented in report.
+
+![easter-egg-incorrect-data](./docs/easter-egg-incorrect-data.png)
