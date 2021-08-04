@@ -14,7 +14,7 @@
       <img src="docs/failedReporter.png" alt="./docs/failedReporter.png" width="500"/>
     * To test the reporter with failed tests, feel free to modify any spec file to fail
     * HTML report is only available for the headless runs
-1. `npm run cypress:cli` - opens cypress graphical user interface
+1. `npm run cypress:gui` - opens cypress graphical user interface
 
 ### Project configuration / automation notes
 
