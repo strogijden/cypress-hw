@@ -67,3 +67,18 @@ export const vNeck: ProductInformation = {
 
 Probably in the current context `typed-fixtures/ProductInformation.ts`, there is no need to store this interface in a separate file.
 I could suggest having it in `cypress-hw/tests/typed-fixtures/product-info-fixture.ts`.
+
+**Readonly**
+
+It is possible to use `Readonly<T>` [utility type](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype).
+
+```ts
+export type ProductInformation = Readonly<{
+    listingPath: string;
+    title: string;
+    brand: string;
+    availableCombos: string;
+    pricePattern: RegExp;
+    premiumPricePattern: RegExp;
+}>;
+```
