@@ -9,7 +9,7 @@
     "test": "npm-run-all --serial --continue-on-error clean-reports test:headless serve-report",
     "test:headless": "cypress run",
     "clean-reports": "rimraf tests/reports",
-    "cypress:cli": "cypress open",
+    "cypress:gui": "cypress open",
     "combine-reports": "mochawesome-merge tests/reports/unmerged/*.json > tests/reports/report.json",
     "generate-report": "marge tests/reports/report.json -f report -o tests/reports/ready --inline",
     "serve-report": "npm-run-all --serial combine-reports generate-report"
