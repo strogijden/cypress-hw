@@ -38,3 +38,13 @@ Good point 🦅. I didn't consider this functionality. Indeed, it could improve 
 Probably you noticed it, but it was expected it would be documented in report.
 
 ![easter-egg-incorrect-data](./docs/easter-egg-incorrect-data.png)
+
+
+**Cypress commands**
+
+> I tried using the cypress suggested pattern of defining custom `cy` commands
+
+This is a good strategy, there is a [post](https://www.cypress.io/blog/2019/01/03/stop-using-page-objects-and-start-using-app-actions/) on this topic.
+
+One comment here - it makes sense to move commands outside of `support/index` to a separate file`commands.ts`
+Then you could simply import it `import './commands';`. Also you could store type definitions for commands in `*.d.ts` file.
