@@ -48,3 +48,17 @@ This is a good strategy, there is a [post](https://www.cypress.io/blog/2019/01/0
 
 One comment here - it makes sense to move commands outside of `support/index` to a separate file`commands.ts`
 Then you could simply import it `import './commands';`. Also you could store type definitions for commands in `*.d.ts` file.
+
+**Unneeded fixture**
+
+Seems, there is no usage of this fixture.
+```ts
+export const vNeck: ProductInformation = {
+    listingPath: '/list/2',
+    title: 'Unisex Jersey Short Sleeve V-Neck Tee',
+    brand: 'By Bella+Canvas STTM543',
+    availableCombos: '8 sizes • 23 colors • 8 print providers',
+    pricePattern: /From USD \d\.\d\d/,
+    premiumPricePattern: /From USD \d\.\d\d with Printify Premium/,
+};
+```
