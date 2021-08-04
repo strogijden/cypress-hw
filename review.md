@@ -62,3 +62,8 @@ export const vNeck: ProductInformation = {
     premiumPricePattern: /From USD \d\.\d\d with Printify Premium/,
 };
 ```
+
+**ProductInformation.ts**
+
+Probably in the current context `typed-fixtures/ProductInformation.ts`, there is no need to store this interface in a separate file.
+I could suggest having it in `cypress-hw/tests/typed-fixtures/product-info-fixture.ts`.
