@@ -49,11 +49,16 @@
     1. Whenever list item is rendered, it gets a random price (xx.xx) and random premium price. This applies to opening
        the app, opening specific listing, searching for specific listing (every additional letter in the search bar
        updates the price value)
-    1. There is a console error related to the price value 
+    1. There is a console error related to the price value (triggered every time price is regenerated)
        ```js
         core.js:6241 ERROR Error: ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it was checked. Previous value: '5.16'. Current value: '8.56'.
         at throwErrorIfNoChangesMode (core.js:8201)
         ```
+    1. There is a console error related to the image url, when a product is opened: 
+       ```js
+       core.js:6241 ERROR TypeError: Cannot read property 'imageUrl' of undefined
+        at ProductComponent_Template (product.component.html:4)
+       ```
     1. All elements have the same amount of colors, amounts and print
        providers (`8 sizes • 23 colors • 8 print providers`)
     1. Not possible to see the options of those 8 sizes, 23 colors and 8 print providers
