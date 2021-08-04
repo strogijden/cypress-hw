@@ -82,3 +82,10 @@ export type ProductInformation = Readonly<{
     premiumPricePattern: RegExp;
 }>;
 ```
+
+**shouldBeHome command**
+
+If this function is used across several spec files, it could make sense to have it as command `cy.shouldBeHome();`.
+```ts
+const shouldBeHome = () => cy.location('pathname').should('equal', '/list');
+```

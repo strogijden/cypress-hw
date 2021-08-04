@@ -10,26 +10,24 @@ describe('Website basic navigation tests', () => {
         cy.visit(leggings.listingPath);
     });
 
-    const shouldBeHome = () => cy.location('pathname').should('equal', '/list');
-
     it('Home should navigate home', () => {
         cy.navBar().contains('Home').click();
-        shouldBeHome();
+        cy.shouldBeHome();
     });
 
     it('About should navigate home', () => {
         cy.navBar().contains('About').click();
-        shouldBeHome();
+        cy.shouldBeHome();
     });
 
     it('Contacts should navigate home', () => {
         cy.navBar().contains('Contacts').click();
-        shouldBeHome();
+        cy.shouldBeHome();
     });
 
     it('Logo should navigate home', () => {
         cy.get('#logo').click();
-        shouldBeHome();
+        cy.shouldBeHome();
     });
 });
 

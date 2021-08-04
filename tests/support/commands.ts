@@ -23,6 +23,8 @@ declare global {
             waitForProductsToBeLoaded(): Chainable<Element>;
 
             checkNoProductsFound(): Chainable<Element>;
+
+            shouldBeHome(): Chainable<Element>;
         }
     }
 }
@@ -69,4 +71,8 @@ Cypress.Commands.add('waitForProductsToBeLoaded', () => {
 
 Cypress.Commands.add('checkNoProductsFound', () => {
     cy.productListContainer().should('include.text', noProductsFound);
+});
+
+Cypress.Commands.add('shouldBeHome', () => {
+    cy.location('pathname').should('equal', '/list');
 });
